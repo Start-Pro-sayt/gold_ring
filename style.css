@@ -1,0 +1,294 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    line-height: 1.6;
+    color: #1f2a3a;
+    background: radial-gradient(circle at top, #fdf6e8 0, #f5f7fb 45%, #eef1f8 100%);
+}
+
+.container {
+    width: 90%;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+    border-radius: 10px;
+}
+
+/* Шапка */
+
+.main-header {
+    background: linear-gradient(135deg, #8b4513, #c0903d);
+    color: #fff;
+    padding: 18px 0 14px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.25);
+    text-align: center;
+}
+
+.main-header h1 {
+    font-size: 30px;
+}
+
+.subtitle {
+    font-size: 14px;
+    opacity: 0.9;
+    margin-top: 4px;
+}
+
+/* Вступление */
+
+.intro {
+    margin: 26px auto 10px;
+    text-align: center;            /* выравниваем по центру */
+    max-width: 780px;              /* чтобы текст не был слишком широким */
+}
+
+.intro h2 {
+    font-size: 22px;
+    margin-bottom: 8px;
+}
+
+.intro p {
+    margin-bottom: 6px;
+}
+
+/* Интерактивное кольцо */
+
+.ring-section {
+    display: flex;
+    justify-content: center;
+    padding: 10px 0 30px;
+}
+
+.ring {
+    position: relative;
+    width: 420px;
+    height: 420px;
+    border-radius: 50%;
+    background: radial-gradient(circle, #fffaf0 0, #f9edd6 45%, #f3e5c4 70%, #f5f7fb 100%);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    overflow: visible;
+}
+
+/* внешнее кольцо */
+.ring::before {
+    content: "";
+    position: absolute;
+    inset: 18px;
+    border-radius: 50%;
+    border: 3px dashed rgba(192,144,61,0.8);
+}
+
+/* внутреннее кольцо */
+.ring-inner {
+    position: absolute;
+    inset: 80px;
+    border-radius: 50%;
+    border: 2px solid rgba(255,255,255,0.8);
+}
+
+/* центр */
+
+.ring-center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 150px;
+    height: 150px;
+    margin-left: -75px;
+    margin-top: -75px;
+    background: radial-gradient(circle, #fdf6e8 0, #8b4513 60%);
+    color: #fff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 15px;
+    padding: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+}
+
+/* подписи городов */
+
+.ring-city {
+    position: absolute;
+    display: inline-block;
+    padding: 6px 10px;
+    font-size: 12px;
+    background: rgba(255,255,255,0.95);
+    border-radius: 999px;
+    text-decoration: none;
+    color: #8b4513;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.18);
+    text-align: center;
+    line-height: 1.3;
+    border: 1px solid rgba(192,144,61,0.5);
+    transition: box-shadow 0.15s, background 0.15s, color 0.15s;
+}
+
+.ring-city:hover {
+    background: #fff4dd;
+    color: #5c2f06;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+/* расположение городов */
+
+.ring-city-1 { top: 8px; left: 50%; transform: translateX(-50%); }
+.ring-city-2 { top: 80px; right: -10px; }
+.ring-city-3 { top: 210px; right: -20px; }
+.ring-city-4 { bottom: 80px; right: -10px; }
+.ring-city-5 { bottom: 8px; left: 50%; transform: translateX(-50%); }
+.ring-city-6 { bottom: 80px; left: -10px; }
+.ring-city-7 { top: 210px; left: -20px; }
+.ring-city-8 { top: 80px; left: -10px; }
+
+/* Карта */
+
+.map-section {
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.map-section h2 {
+    font-size: 22px;
+    margin-bottom: 8px;
+}
+
+.map-section p {
+    font-size: 14px;
+    margin-bottom: 12px;
+}
+
+.map-wrapper {
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 10px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.map-wrapper img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+/* Страницы городов */
+
+.city-main {
+    padding-bottom: 20px;
+}
+
+.city-header {
+    background: linear-gradient(135deg, #8b4513, #c0903d);
+    color: #fff;
+    padding: 16px 0 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.25);
+}
+
+.city-header h1 {
+    font-size: 26px;
+    text-align: center;
+}
+
+.city-header .subtitle {
+    margin-top: 2px;
+    font-size: 13px;
+    text-align: center;
+}
+
+.city-section {
+    margin-top: 22px;
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 22px 26px;          /* больше отступы, справа/слева тоже */
+    box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+    overflow: hidden;            /* на всякий случай ничего не вылезет */
+}
+.city-flex {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    margin-bottom: 10px;
+}
+
+.city-flex img {
+    flex: 0 0 280px;
+    max-width: 280px;
+}
+
+.city-flex div {
+    flex: 1 1 260px;
+    font-size: 14px;
+    max-width: 100%;
+}
+
+.city-section h2 {
+    margin-bottom: 6px;
+    font-size: 20px;
+}
+
+.city-section h3 {
+    margin-top: 10px;
+    margin-bottom: 4px;
+    font-size: 16px;
+}
+
+.back-home {
+    display: inline-block;
+    margin-top: 10px;
+    font-size: 14px;
+    color: #8b4513;
+    text-decoration: none;
+}
+
+/* Подвал */
+
+.main-footer {
+    background: #2b323f;
+    color: #e6ebf5;
+    font-size: 13px;
+    text-align: center;
+    padding: 12px 0;
+}
+
+/* Адаптивность */
+
+@media (max-width: 720px) {
+    .ring {
+        width: 320px;
+        height: 320px;
+    }
+
+    .ring-center {
+        width: 130px;
+        height: 130px;
+        margin-left: -65px;
+        margin-top: -65px;
+        font-size: 13px;
+    }
+
+    .ring-city {
+        font-size: 11px;
+        padding: 4px 8px;
+    }
+
+    .city-flex {
+        flex-direction: column;
+    }
+
+    .city-flex img {
+        max-width: 100%;
+    }
+}
